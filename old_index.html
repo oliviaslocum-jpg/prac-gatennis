@@ -32,18 +32,26 @@
     <!-- THEME: data-theme on <html>, on every page. Try sunset, synthwave,
          forest. THE NAV is on each page twice, wide and phone: change one, change
          all. -->
-    <!-- ANOTHER HOME PAGE: the same site, with the nav over a photo slider.
-         Keep this one or index.html, not both, and name the keeper index.html. -->
     <a class="skip-link btn btn-primary" href="#main">Skip to content</a>
 
-    <!-- THE NAV sits over the slider, then turns solid as the page scrolls
-         (.nav-over in styles.css, step 5 of js/site.js). -->
-    <nav class="navbar nav-over px-4 md:px-8" data-nav-over aria-label="Main">
+    <!-- THE TICKER: the next match and the last result, above the nav. Change
+         it every week, or delete it. On a phone it scrolls sideways. -->
+    <aside class="bg-neutral text-neutral-content text-sm" aria-label="This week">
+      <div class="px-4 md:px-8 py-2 flex items-center gap-6 md:gap-10 overflow-x-auto whitespace-nowrap">
+        <p class="shrink-0"><span class="badge badge-primary badge-sm font-bold uppercase mr-2">Next</span>vs. Opponent · <time datetime="20XX-10-04T19:00">Sat Oct 4, 7:00 pm</time> · Home</p>
+        <p class="shrink-0"><span class="badge badge-sm font-bold uppercase mr-2">Last</span><a class="link link-hover" href="game.html">Won 00–00 at Opponent</a></p>
+        <p class="shrink-0"><span class="badge badge-sm font-bold uppercase mr-2">Table</span>0th of 00 · 00 points</p>
+      </div>
+    </aside>
+
+    <!-- THE NAV: a full-width bar in the team color. It is on every page:
+         change one, change all. -->
+    <nav data-sticky-nav class="navbar bg-primary text-primary-content sticky top-0 z-30 px-4 md:px-8 shadow-lg" aria-label="Main">
       <div class="navbar-start w-auto shrink-0">
-        <!-- The mark: a monogram in a colored square. Swap it for your Unit 5 logo,
+        <!-- The mark: a monogram in a square. Swap it for your Unit 5 logo,
              and img/favicon.svg with it. -->
         <a class="flex items-center gap-3" href="index.html">
-          <span class="grid place-items-center size-10 rounded-lg bg-primary text-primary-content font-display text-xl font-bold">C</span>
+          <span class="grid place-items-center size-10 rounded-lg bg-primary-content text-primary font-display text-xl font-bold">C</span>
           <span class="font-display text-xl font-bold uppercase tracking-wider">Clubhouse</span>
         </a>
       </div>
@@ -51,18 +59,18 @@
         <!-- HOMES: each home page has its own hero. Keep the one you like best
              as index.html, then delete the rest and this dropdown. -->
         <details class="dropdown dropdown-end hidden lg:block">
-          <summary class="btn btn-ghost text-inherit text-base font-normal gap-1">Homes <svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <summary class="btn btn-ghost text-inherit font-display text-lg font-normal uppercase tracking-wide gap-1">Homes <svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
           <div class="dropdown-content bg-base-100 text-base-content normal-case tracking-normal font-normal border border-base-content/10 rounded-box z-40 mt-3 w-[38rem] p-3 shadow-xl">
             <ul class="grid grid-cols-3 gap-2">
               <li>
-                <a class="block rounded-box p-2 hover:bg-base-200 focus-visible:bg-base-200" href="index.html">
+                <a class="block rounded-box p-2 hover:bg-base-200 focus-visible:bg-base-200" href="index.html" aria-current="page">
                   <img class="aspect-video w-full rounded-field object-cover" src="img/stadium-night.jpg" width="1920" height="1080" loading="lazy" alt="" />
                   <span class="mt-2 block font-semibold">Home 1</span>
                   <span class="block text-sm text-base-content/70">A film of the stadium behind the next match</span>
                 </a>
               </li>
               <li>
-                <a class="block rounded-box p-2 hover:bg-base-200 focus-visible:bg-base-200" href="index-2.html" aria-current="page">
+                <a class="block rounded-box p-2 hover:bg-base-200 focus-visible:bg-base-200" href="index-2.html">
                   <img class="aspect-video w-full rounded-field object-cover" src="img/crowd-wide.jpg" width="1920" height="1080" loading="lazy" alt="" />
                   <span class="mt-2 block font-semibold">Home 2</span>
                   <span class="block text-sm text-base-content/70">The nav over three photos that turn</span>
@@ -78,18 +86,18 @@
             </ul>
           </div>
         </details>
-        <ul class="menu menu-horizontal hidden lg:flex gap-1 text-base">
+        <ul class="menu menu-horizontal hidden lg:flex gap-1 font-display text-lg uppercase tracking-wide">
           <li><a href="schedule.html">Schedule</a></li>
           <li><a href="roster.html">Roster</a></li>
           <li><a href="elements.html">Elements</a></li>
         </ul>
-        <a class="btn btn-primary btn-sm md:btn-md" href="schedule.html#tickets"><svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M13 5v2"/><path d="M13 17v2"/><path d="M13 11v2"/></svg> Get tickets</a>
+        <a class="btn btn-neutral btn-sm md:btn-md" href="schedule.html#tickets"><svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M13 5v2"/><path d="M13 17v2"/><path d="M13 11v2"/></svg> Get tickets</a>
         <details class="dropdown dropdown-end lg:hidden">
           <summary class="btn btn-ghost text-inherit btn-square" aria-label="Site pages"><svg class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg></summary>
           <ul class="menu dropdown-content bg-base-100 text-base-content normal-case tracking-normal font-normal border border-base-content/10 rounded-box z-40 mt-3 w-56 p-2 shadow-xl text-base">
             <li class="menu-title">Homes</li>
-            <li><a href="index.html">Home 1</a></li>
-            <li><a href="index-2.html" aria-current="page">Home 2</a></li>
+            <li><a href="index.html" aria-current="page">Home 1</a></li>
+            <li><a href="index-2.html">Home 2</a></li>
             <li><a href="index-3.html">Home 3</a></li>
             <li class="menu-title">Pages</li>
             <li><a href="schedule.html">Schedule</a></li>
@@ -100,63 +108,56 @@
       </div>
     </nav>
 
-    <!-- ============================================================ HERO SLIDER
-         Three slides that turn every 7 seconds and stop for a hover, a focus or
-         the pause button. Each is a photo, a scrim and its words: swap all three,
-         and credit the photos. Only the first slide's heading is the page's h1. -->
-    <header class="relative bg-neutral text-white" data-nav-under data-carousel data-autoplay="7000">
-      <div class="carousel w-full h-[100svh] min-h-[38rem] max-h-[62rem]" tabindex="0" role="group" aria-roledescription="carousel" aria-label="Highlights">
-        <div class="carousel-item relative w-full items-center" role="group" aria-roledescription="slide" aria-label="1 of 3">
-          <img class="absolute inset-0 size-full object-cover" src="img/stadium-night.jpg" width="1920" height="1080" fetchpriority="high" alt="The stadium at night under floodlights" />
-          <div class="slide-scrim"></div>
-          <div class="relative w-full max-w-6xl mx-auto px-6 pt-24 pb-28">
-            <div class="max-w-4xl">
-              <p class="inline-flex items-center gap-2 rounded-full bg-black/50 px-4 py-1.5 text-sm font-semibold tracking-wide mb-8">20XX season</p>
-              <h1 class="font-display text-6xl md:text-9xl font-bold uppercase leading-[0.9] tracking-tight mb-6">Your team<br />name here</h1>
-              <p class="text-xl md:text-2xl mb-10 max-w-2xl">One sentence. The sport, the league, the town.</p>
-              <div class="flex flex-col sm:flex-row gap-3 ">
-                <a class="btn btn-lg btn-primary" href="schedule.html#tickets">Get tickets</a>
-                <a class="btn btn-lg btn-outline text-white border-white/70 hover:bg-white hover:text-black" href="schedule.html">The schedule</a>
+    <!-- ============================================================ HERO
+         YouTube over the photo in styles.css (.hero-poster). data-video is the id
+         from a YouTube URL: swap it, then fix the footer credit. data-start and
+         data-end pick the looped clip, in seconds; later ones show a caption. -->
+    <header class="hero-stage min-h-[80vh] md:min-h-[90vh] flex items-end">
+      <div class="hero-poster" data-video="pGeUEGLOtcA" data-start="1" data-end="34" data-hero-video></div>
+      <div class="hero-scrim"></div>
+
+      <div class="relative z-10 w-full px-6 pt-32 md:pt-40">
+        <div class="max-w-6xl mx-auto text-white">
+          <p class="inline-flex items-center gap-2 rounded-full bg-primary text-primary-content px-5 py-2 text-base font-bold uppercase tracking-widest mb-8">
+            <svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14.66V17a1 1 0 0 1-1 1 2 2 0 0 0-2 2v2"/><path d="M14 14.66V17a1 1 0 0 0 1 1 2 2 0 0 1 2 2v2"/><path d="M17.916 10H19.5A2.5 2.5 0 0 0 22 7.5V5a1 1 0 0 0-1-1h-3"/><path d="M4 22h16"/><path d="M6 9a6 6 0 0 0 12 0V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1z"/><path d="M6.084 10H4.5A2.5 2.5 0 0 1 2 7.5V5a1 1 0 0 1 1-1h3"/></svg> 20XX season
+          </p>
+          <h1 class="font-display text-6xl md:text-9xl font-bold uppercase leading-[0.9] tracking-tight mb-6 max-w-4xl">
+            Your team<br />name here
+          </h1>
+          <p class="text-xl md:text-2xl max-w-2xl mb-10">
+            One sentence. The sport, the league, the town. Not "a tradition of
+            excellence" — say who you actually play and where.
+          </p>
+
+          <!-- The next-game card crosses the hero's edge on purpose: -mb-* pulls
+               it down, pt-* on the next section makes room. Change them together. -->
+          <div class="card bg-base-100 text-base-content shadow-2xl max-w-4xl -mb-20 md:-mb-24">
+            <div class="card-body gap-6 md:flex-row md:items-center">
+              <div class="flex items-center gap-4 flex-1">
+                <!-- Two crests facing off. Swap the letters for real badges once
+                     you may use them. -->
+                <span class="grid place-items-center size-14 rounded-full bg-primary text-primary-content font-display text-2xl font-bold shrink-0" aria-hidden="true">C</span>
+                <span class="font-display text-xl font-bold opacity-80" aria-hidden="true">vs</span>
+                <span class="grid place-items-center size-14 rounded-full bg-neutral text-neutral-content font-display text-2xl font-bold shrink-0" aria-hidden="true">O</span>
+                <div class="ml-2">
+                  <p class="text-xs font-bold uppercase tracking-widest text-primary mb-1">Next game · Home</p>
+                  <p class="font-display text-2xl md:text-3xl font-bold uppercase">vs. Opponent</p>
+                  <!-- A <time datetime> tells a search engine or a calendar this is
+                       a date. -->
+                  <p class="opacity-80"><time datetime="20XX-10-04T19:00">Friday, October 4 · 7:00pm</time></p>
+                </div>
               </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item relative w-full items-center" role="group" aria-roledescription="slide" aria-label="2 of 3">
-          <img class="absolute inset-0 size-full object-cover" src="img/crowd-wide.jpg" width="1920" height="1080" loading="lazy" alt="A packed home stand watching a night game" />
-          <div class="slide-scrim"></div>
-          <div class="relative w-full max-w-6xl mx-auto px-6 pt-24 pb-28">
-            <div class="max-w-4xl">
-              <p class="inline-flex items-center gap-2 rounded-full bg-black/50 px-4 py-1.5 text-sm font-semibold tracking-wide mb-8">Home games</p>
-              <h2 class="font-display text-6xl md:text-9xl font-bold uppercase leading-[0.9] tracking-tight mb-6">Fill the<br />home end</h2>
-              <p class="text-xl md:text-2xl mb-10 max-w-2xl">Season tickets: what they cost, and what they get you.</p>
-              <div class="flex flex-col sm:flex-row gap-3 ">
-                <a class="btn btn-lg btn-primary" href="schedule.html#tickets">Season tickets</a>
+              <!-- THE COUNTDOWN: js/countdown.js counts down to data-countdown, the
+                   same moment as the <time> beside it. It stays hidden while the
+                   date is a placeholder; write the real one in both. -->
+              <div class="game-countdown" data-countdown="20XX-10-04T19:00" hidden aria-hidden="true">
+                <span data-unit-box><span data-unit="days">00</span><small>Days</small></span>
+                <span data-unit-box><span data-unit="hours">00</span><small>Hrs</small></span>
+                <span data-unit-box><span data-unit="minutes">00</span><small>Min</small></span>
+                <span data-unit-box><span data-unit="seconds">00</span><small>Sec</small></span>
               </div>
+              <a class="btn btn-primary btn-lg" href="schedule.html#tickets"><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M13 5v2"/><path d="M13 17v2"/><path d="M13 11v2"/></svg> Get tickets</a>
             </div>
-          </div>
-        </div>
-        <div class="carousel-item relative w-full items-center" role="group" aria-roledescription="slide" aria-label="3 of 3">
-          <img class="absolute inset-0 size-full object-cover" src="img/floodlights-wide.jpg" width="1920" height="1080" loading="lazy" alt="Floodlights over the pitch before kickoff" />
-          <div class="slide-scrim"></div>
-          <div class="relative w-full max-w-6xl mx-auto px-6 pt-24 pb-28">
-            <div class="max-w-4xl">
-              <p class="inline-flex items-center gap-2 rounded-full bg-black/50 px-4 py-1.5 text-sm font-semibold tracking-wide mb-8">Join us</p>
-              <h2 class="font-display text-6xl md:text-9xl font-bold uppercase leading-[0.9] tracking-tight mb-6">Training,<br />Tuesday and Thursday</h2>
-              <p class="text-xl md:text-2xl mb-10 max-w-2xl">Who can try out, and where to turn up.</p>
-              <div class="flex flex-col sm:flex-row gap-3 ">
-                <a class="btn btn-lg btn-primary" href="roster.html">Meet the squad</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="absolute inset-x-0 bottom-0 pb-8">
-        <div class="max-w-6xl mx-auto px-6 flex items-center justify-between gap-4" data-carousel-controls hidden>
-          <div class="flex items-center gap-2" data-dots></div>
-          <div class="flex items-center gap-2">
-            <button class="btn btn-circle btn-sm btn-ghost border border-white/60 text-white" type="button" data-pause aria-pressed="false" aria-label="Pause the slides"><svg class="size-4 i-pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="4" width="4" height="16" rx="1"/><rect x="14" y="4" width="4" height="16" rx="1"/></svg><svg class="size-4 i-play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5z"/></svg></button>
-            <button class="btn btn-circle btn-ghost border border-white/60 text-white" type="button" data-prev aria-label="Previous slide"><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
-            <button class="btn btn-circle btn-ghost border border-white/60 text-white" type="button" data-next aria-label="Next slide"><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
           </div>
         </div>
       </div>
@@ -165,7 +166,7 @@
     <main id="main">
       <!-- ============================================================ RECORD
            Three numbers a fan actually asks for. -->
-      <section class="px-6 pt-20 md:pt-28 pb-20 max-w-6xl mx-auto" aria-label="Season record">
+      <section class="px-6 pt-32 md:pt-36 pb-20 max-w-6xl mx-auto" aria-label="Season record">
         <div class="stats stats-vertical sm:stats-horizontal shadow w-full bg-base-200" data-reveal>
           <div class="stat">
             <div class="stat-figure text-primary"><svg class="size-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14.66V17a1 1 0 0 1-1 1 2 2 0 0 0-2 2v2"/><path d="M14 14.66V17a1 1 0 0 0 1 1 2 2 0 0 1 2 2v2"/><path d="M17.916 10H19.5A2.5 2.5 0 0 0 22 7.5V5a1 1 0 0 0-1-1h-3"/><path d="M4 22h16"/><path d="M6 9a6 6 0 0 0 12 0V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1z"/><path d="M6.084 10H4.5A2.5 2.5 0 0 1 2 7.5V5a1 1 0 0 1 1-1h3"/></svg></div>
@@ -594,5 +595,6 @@
 
     <script src="js/site.js"></script>
     <script src="js/countdown.js"></script>
-      </body>
+    <script src="js/hero-video.js"></script>
+  </body>
 </html>
