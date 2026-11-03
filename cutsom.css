@@ -1,0 +1,17 @@
+/*** COLORS ***/
+
+
+/** FONTS **/
+
+
+/**HERO**/
+.hero {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  background-color: var(--color-base-300);
+  background-image: url('https://photos.smugmug.com/photos/i-sbMsJNV/0/LW6w97TxWGMPfXGJQfTL8kj4vNxRDZ7S6RVFb3Ldq/L/i-sbMsJNV-L.jpg'),
+    linear-gradient(155deg, var(--color-neutral) 0%, var(--color-base-300) 45%, var(--color-primary) 130%);
+  background-size: cover;
+  background-position: center 40%;
+}

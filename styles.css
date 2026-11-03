@@ -20,9 +20,9 @@
  * theme on <html>, in every page. Set --color-primary-content with your primary
  * and measure the pair: a navy school color often takes white text, not black. */
 [data-theme='night'] {
-  --color-primary: #0E2797;
-  --color-primary-content: #AFC714;
-  --color-accent: #AFC714;
+  --color-primary: #AFC714;
+  --color-primary-content: #201A23;
+  --color-accent: #0E2797;
 }
 
 /* ============================================================ TYPE
@@ -30,12 +30,15 @@
  * Two faces at most: Oswald for headings, Inter for body. To change them,
  * replace the Google Fonts <link> in the <head> of every page, then the names below. */
 body {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: "Nunito Sans", sans-serif;
 }
 
 .font-display,
 .card-title {
-  font-family: 'Oswald', Impact, sans-serif;
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
 }
 
 /* ============================================================ HERO VIDEO
@@ -57,7 +60,7 @@ body {
   z-index: 0;
   overflow: hidden;
   background-color: var(--color-base-300);
-  background-image: url('img/stadium-night.jpg'),
+  background-image: url('https://photos.smugmug.com/photos/i-sbMsJNV/0/LW6w97TxWGMPfXGJQfTL8kj4vNxRDZ7S6RVFb3Ldq/L/i-sbMsJNV-L.jpg'),
     linear-gradient(155deg, var(--color-neutral) 0%, var(--color-base-300) 45%, var(--color-primary) 130%);
   background-size: cover;
   background-position: center 40%;
@@ -66,9 +69,6 @@ body {
 /* Cover, not contain: 177.78vh is 16/9 of the screen's height. --video-zoom crops
  * YouTube's bars and any black bars in the footage: 1.2 for 16:9 like this clip,
  * about 1.36 for widescreen film. Swap the video, check the edges, set this. */
-.hero-poster {
-  --video-zoom: 1.2;
-}
 
 .hero-poster iframe {
   position: absolute;
@@ -103,7 +103,7 @@ body {
 .page-header-photo {
   position: absolute;
   inset: 0;
-  background: url('img/stadium-night.jpg') center 40% / cover;
+  background: url('https://photos.smugmug.com/photos/i-sbMsJNV/0/LW6w97TxWGMPfXGJQfTL8kj4vNxRDZ7S6RVFb3Ldq/L/i-sbMsJNV-L.jpg') center 40% / cover;
   opacity: 0.12;
 }
 
